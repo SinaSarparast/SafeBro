@@ -45,19 +45,12 @@ function processUrl(tabId, url) {
                           ]
                         }
                     };
-        var APIKEY = 'AIzaSyBljgJB5rajZoDZbEkKlQH0gqPV8pUn8Cs';
+        var APIKEY = 'youshouldsignupandgetyourownapikey';
         var APPVER = '1.5.2';
         var PVER = '3.1';
         y.open('POST', 'https://safebrowsing.googleapis.com/v4/threatMatches:find?key='+APIKEY,true);
 
         y.setRequestHeader("Content-type", "application/json");
-        // y.setRequestHeader("Content-length", params.length);
-        // y.setRequestHeader("Connection", "close");
-        // http.onreadystatechange = function() {//Call a function when the state changes.
-        //                                         if(http.readyState == 4 && http.status == 200) {
-        //                                             alert(http.responseText);
-        //                                         }
-        //                                     }
         y.onreadystatechange = function() {
             if (y.readyState == 4) {
                 console.log('here is response');
