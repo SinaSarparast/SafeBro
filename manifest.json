@@ -1,0 +1,19 @@
+{
+    "name": "SafeBro",
+    "manifest_version": 2,
+    "version": "1.0",
+    "description": "Contains webpage's security info.",
+    "background": {"scripts":["background.js"]},
+    "permissions": 
+    [
+    	  "tabs",
+    	  "webRequest",
+          "*://*.google.com/",
+          "<all_urls>",
+          "webRequest",
+          "webRequestBlocking"
+      ],
+    "browser_action": {
+        "default_popup": "popup.html"
+    }
+}
